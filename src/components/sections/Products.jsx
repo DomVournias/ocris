@@ -1,6 +1,5 @@
 "use client";
 
-import ProductSlider from "../products/ProductSlider";
 import ProductsSwiper from "../swiper/ProductsSwiper";
 import React from "react";
 import useStore from "@/lib/stores/store";

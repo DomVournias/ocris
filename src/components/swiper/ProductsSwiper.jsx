@@ -82,7 +82,6 @@ export default function ProductsSwiper({
               </button>
             </SwiperSlide>
           ))}
-          ...
         </Swiper>
       </div>
     </section>

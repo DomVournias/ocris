@@ -17,7 +17,7 @@ export default async function RootLayout({ children }) {
   // console.log("LAYOUT", data);
   return (
     <html lang="el" className="overflow-x-hidden">
-      <body className={Myriad.className + "relative"}>
+      <body className={Myriad.className + " relative overflow-x-hidden"}>
         <Header
           header={data.headerSection.header}
           menu={data.headerMenu.menuItems.nodes}
