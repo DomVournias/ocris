@@ -7,10 +7,10 @@ export default function Info({ data }) {
     <section>
       <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 ">
         <ContentEye icon={"heart"}>
-          <span className="text-[12px] lg:text-2xl text-primary text-center">
+          <span className="text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] text-primary text-center">
             {data.title}
           </span>
-          <p className="text-[9px] lg:text-sm font-medium text-text text-center pb-4">
+          <p className="text-[10px] sm:text-[13px] md:text-[16px] lg:text-[16px] xl:text-[18px] font-medium text-text text-center pb-2 lg:pb-4">
             {data.paragraph}
           </p>
           <CardButton

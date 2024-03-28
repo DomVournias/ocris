@@ -20,7 +20,7 @@ export default function Header({ header, socials, menu }) {
           />
         </Link>
         <div className="w-4/5 h-[100px] z-50">
-          <div className="flex justify-between text-primaryText font-medium text-sm">
+          <div className="flex justify-end text-primaryText font-medium text-sm">
             <div className="flex justify-center items-center gap-3">
               <span>
                 M <a href="tel:+306947931526">+30 6947 931526</a>
@@ -30,10 +30,10 @@ export default function Header({ header, socials, menu }) {
                 T <a href="tel:+302310866898">+30 2310 866898</a>
               </span>
             </div>
-            <button className="flex items-center justify-center gap-2 text-sm  leading-4">
+            {/* <button className="flex items-center justify-center gap-2 text-sm  leading-4">
               <AiOutlineGlobal className="flex text-lg" />
               <p className="block mb-[-2px]">ΕΛΛΗΝΙΚΑ</p>
-            </button>
+            </button> */}
           </div>
 
           <div className="border-b-2 border-primary h-[90px] ">

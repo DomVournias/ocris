@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Cards({ data, type, unlink }) {
   return (
-    <ul className="grid md:grid-cols-2 lg:grid-cols-3 items-center justify-between gap-10 px-10">
+    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-between gap-10 px-10">
       {data.map((item, index) => (
         <li key={index} className="flex flex-col justify-center items-center">
           <Card

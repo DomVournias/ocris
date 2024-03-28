@@ -52,7 +52,7 @@ export default function Card({
           )}
         </div>
         <div className="space-y-2 pb-4">
-          <h4 className="text-2xl text-primary pt-2">{title}</h4>
+          <h4 className="text-xl md:text-2xl text-primary pt-2">{title}</h4>
           {type === "articles" ? (
             <div
               dangerouslySetInnerHTML={{ __html: description }}
