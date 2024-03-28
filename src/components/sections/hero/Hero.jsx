@@ -31,7 +31,7 @@ export default function Hero({
             </div>
           </div>
         )}
-        <div className="absolute z-0 top-[20px] left-[180px] animate-[spin_20s_infinite_linear]">
+        <div className="absolute z-0 top-[0px] left-[100px] sm:top-[20px] sm:left-[120px] md:top-[30px] md:left-[120px]  lg:top-[50px] lg:left-[220px] xl:top-[20px] xl:left-[180px] animate-[spin_20s_infinite_linear]">
           <div className="relative w-[100px] h-[100px] md:w-[150px] md:h-[150px]  lg:w-[150px] lg:h-[150px] xl:w-[250px] xl:h-[250px]">
             <Image
               alt="background 1"
@@ -45,7 +45,7 @@ export default function Hero({
             />
           </div>
         </div>
-        <div className="absolute z-0 bottom-[40px] left-[-50px] animate-[spin_20s_infinite_linear]">
+        <div className="absolute z-0 bottom-[0px] left-[-20px] lg:bottom-[40px] lg:left-[-50px]  animate-[spin_20s_infinite_linear]">
           <div className="relative w-[150px] h-[150px] md:w-[250px] md:h-[250px]  lg:w-[300px] lg:h-[300px] xl:w-[350px] xl:h-[350px]">
             <Image
               alt="background 2"

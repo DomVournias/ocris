@@ -38,7 +38,7 @@ export default function ContentEye({ children, icon }) {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-6 justify-center w-full px-4 lg:px-20 h-full rotate-[-45deg]">
+          <div className="flex flex-col gap-6 justify-center w-full px-8 lg:px-20 h-full rotate-[-45deg]">
             <div className="flex flex-col gap-2 ">{children}</div>
           </div>
         </div>

@@ -25,7 +25,7 @@ export default function ProductsPageContent({ products }) {
         <div>
           <SliderEye products={products} />
         </div>
-        <div className="max-w-[1200px] py-[110px] px-[110px] m-auto bg-white shadow-xl rounded-xl">
+        <div className="max-w-[1200px] py-[10vh] px-[10vw] m-auto bg-white shadow-xl rounded-xl">
           {products.map((product, index) => (
             <div
               key={index}

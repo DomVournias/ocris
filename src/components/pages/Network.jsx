@@ -19,7 +19,7 @@ export default function Network({ page }) {
       </div>
       <article className="relative w-full pt-4 pb-32">
         <div className="max-w-[1200px] m-auto bg-white shadow-xl rounded-xl">
-          <ul className="grid grid-cols-2 gap-10 post-content space-y-2 pt-[50px] pb-[110px] px-[110px]">
+          <ul className="grid grid-cols-2 gap-10 post-content space-y-2 py-[10vh] px-[10vw]">
             {content.networks.map((item, index) => (
               <li key={index} className="flex justify-center items-center">
                 <address

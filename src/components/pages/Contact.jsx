@@ -19,9 +19,11 @@ export default function Contact({ page }) {
           heading2={hero.heading2}
         />
       </div>
-      <div className="grid grid-cols-2 gap-[2vw] divide-x-4 divide-opacity-20 divide-text divide-dotted max-w-7xl m-auto pt-10 pb-32">
-        <div className="pl-[2vw] space-y-20">
-          <NewsletterForm className="text-primary font-semibold" />
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-[50px] sm:gap-[2vw] sm:divide-x-4 divide-opacity-20 divide-text divide-dotted max-w-7xl m-auto py-[10vh] px-[10vw]">
+        <div className="pl-[2vw] sm:space-y-20">
+          <div className="hidden sm:flex">
+            <NewsletterForm className=" text-primary font-semibold" />
+          </div>
           <address
             dangerouslySetInnerHTML={{ __html: content.details }}
             className="not-italic space-y-4 text-primary"
@@ -29,6 +31,9 @@ export default function Contact({ page }) {
         </div>
         <div className="px-[2vw] z-50">
           <ContactForm />
+        </div>
+        <div className=" sm:hidden">
+          <NewsletterForm className=" text-primary font-semibold" />
         </div>
       </div>
     </section>

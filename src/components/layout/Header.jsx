@@ -62,9 +62,9 @@ export default function Header({ header, socials, menu }) {
         </div>
       </div>
       <div className="flex w-full md:hidden">
-        <div className="flex w-full justify-between m-auto pt-2 pb-2 px-[2vw] z-50">
+        <div className="flex w-full justify-between m-auto pt-2 pb-2 px-[3vw] z-50">
           <div className="">
-            <Link href="/" className="h-[100px] w-[120px] flex relative ">
+            <Link href="/" className="h-[80px] w-[120px] flex relative ">
               <Image
                 alt="logo"
                 src={header.logo.node.sourceUrl}

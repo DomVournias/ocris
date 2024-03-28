@@ -26,19 +26,19 @@ export default function Company({ page }) {
         <div className="max-w-[1200px] m-auto bg-white shadow-xl rounded-xl">
           <div
             dangerouslySetInnerHTML={{ __html: content.paragraph1 }}
-            className="post-content space-y-2 pt-[110px] pb-[50px] px-[110px]"
+            className="post-content space-y-2 pt-[8vh] pb-[10vh] px-[10vw]"
           />
           <div className="relative flex max-w-7xl justify-center items-center m-auto z-10">
             <ContentEye icon={"person"}>
               <div
                 dangerouslySetInnerHTML={{ __html: content.eye.content }}
-                className="space-y-2"
+                className="text-accentText space-y-2 text-[10px] sm:text-[12px] md:text-[15px] lg:text-[18px]"
               ></div>
             </ContentEye>
           </div>
           <div
             dangerouslySetInnerHTML={{ __html: content.paragraph2 }}
-            className="post-content space-y-2 pb-[110px] pt-[50px] px-[110px]"
+            className="post-content space-y-2 pt-[8vh] pb-[10vh] px-[10vw]"
           />
         </div>
         <Image
