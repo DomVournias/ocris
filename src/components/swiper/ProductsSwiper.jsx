@@ -7,34 +7,34 @@ import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Image from "next/image";
-import useStore from "@/lib/stores/store";
 
 // Import Swiper styles
 
-export default function ProductsSwiper({ products }) {
-  const currentProduct = useStore((state) => state.currentProduct);
-  const setCurrentProduct = useStore((state) => state.setCurrentProduct);
-
+export default function ProductsSwiper({
+  products,
+  currentProduct,
+  handleSwipe,
+}) {
   const handleSlideChange = () => {
     const newProductIndex = (currentProduct + 1) % products.length;
-    setCurrentProduct(newProductIndex);
+    handleSwipe(newProductIndex);
   };
 
   const handleProductSlide = (index) => {
-    setCurrentProduct(index);
+    handleSwipe(index);
   };
 
   useEffect(() => {
     if (window.matchMedia("(min-width: 1200px)").matches) {
       const intervalId = setInterval(() => {
         const newProductIndex = (currentProduct + 1) % products.length;
-        setCurrentProduct(newProductIndex);
+        handleSwipe(newProductIndex);
       }, 5000);
 
       // Cleanup function to clear interval on component unmount
       return () => clearInterval(intervalId);
     }
-  }, [currentProduct, setCurrentProduct, products.length]);
+  }, [currentProduct, handleSwipe, products.length]);
 
   return (
     <section>

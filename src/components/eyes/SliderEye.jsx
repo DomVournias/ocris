@@ -1,7 +1,9 @@
 import Image from "next/image";
 import React from "react";
+import useStore from "@/lib/stores/store";
 
-export default function SliderEye({ products, activeProduct }) {
+export default function SliderEye({ products }) {
+  const activeProduct = useStore((state) => state.activeProduct);
   return (
     <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 py-[50px]">
       {products.map((product, index) => (

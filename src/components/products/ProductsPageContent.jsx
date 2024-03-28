@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 
 import Image from "next/image";
+import ProductsSwiper from "../swiper/ProductsSwiper";
 import SliderEye from "../eyes/SliderEye";
 import useStore from "@/lib/stores/store";
 
@@ -16,26 +17,13 @@ export default function ProductsPageContent({ products }) {
   return (
     <>
       <section>
-        <ul className="flex gap-8 justify-center items-center z-50">
-          {products.map((product, index) => (
-            <li key={index}>
-              <button
-                onClick={() => setActiveProduct(index)}
-                className="relative w-56 h-64"
-              >
-                <Image
-                  alt={"product" + "-" + product.id}
-                  src={product.productDetails.content.image.node.sourceUrl}
-                  fill={true}
-                  style={{ objectFit: "contain" }}
-                  className="z-50"
-                />
-              </button>
-            </li>
-          ))}
-        </ul>
+        <ProductsSwiper
+          products={products}
+          currentProduct={activeProduct}
+          handleSwipe={setActiveProduct}
+        />
         <div>
-          <SliderEye products={products} activeProduct={activeProduct} />
+          <SliderEye products={products} />
         </div>
         <div className="max-w-[1200px] py-[110px] px-[110px] m-auto bg-white shadow-xl rounded-xl">
           {products.map((product, index) => (
