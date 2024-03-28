@@ -76,6 +76,10 @@ body {
     padding-bottom: 0.2rem;
   }
 
+  .products-slider .swiper-slide{
+    display: flex!important;
+  }
+
   /* .eye {
     clip-path: polygon(
       99.624% 48.114%,

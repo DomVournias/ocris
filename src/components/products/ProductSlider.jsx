@@ -9,15 +9,15 @@ export default function ProductSlider({ products }) {
   const currentProduct = useStore((state) => state.currentProduct);
   const setCurrentProduct = useStore((state) => state.setCurrentProduct);
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const newProductIndex = (currentProduct + 1) % products.length;
-      setCurrentProduct(newProductIndex);
-    }, 6000); // Adjust the interval time as needed (3000 milliseconds = 3 seconds)
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     const newProductIndex = (currentProduct + 1) % products.length;
+  //     setCurrentProduct(newProductIndex);
+  //   }, 6000); // Adjust the interval time as needed (3000 milliseconds = 3 seconds)
 
-    // Cleanup function to clear interval on component unmount
-    return () => clearInterval(intervalId);
-  }, [currentProduct, setCurrentProduct, products.length]);
+  //   // Cleanup function to clear interval on component unmount
+  //   return () => clearInterval(intervalId);
+  // }, [currentProduct, setCurrentProduct, products.length]);
 
   const handleProductSlide = (index) => {
     setCurrentProduct(index);
