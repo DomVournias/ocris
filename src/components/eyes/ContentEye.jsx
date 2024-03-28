@@ -19,10 +19,10 @@ export default function ContentEye({ children, icon }) {
           className="rounded-[20px]"
         />
       </div>
-      <div className="absolute right-[50px] md:right-[100px] lg:right-[150px]">
-        <div className="relative flex justify-center items-center w-[170px] h-[170px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] rounded-br-[60%] rounded-tl-[60%] rounded-tr-[20px] rounded-bl-[20px] rotate-45 bg-secondary z-20 shadow-xl">
-          <div className="absolute top-[-30px] right-[50px] lg:top-[-60px] lg:right-[150px]">
-            <div className="relative w-[60px] h-[60px] z-60 flex">
+      <div className="absolute left-0 right-0 m-auto w-fit bottom-[-50px] lg:right-[-50%] lg:bottom-[22%]">
+        <div className="relative flex justify-center items-center w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px] rounded-br-[60%] rounded-tl-[60%] rounded-tr-[20px] rounded-bl-[20px] rotate-45 bg-secondary z-20 shadow-xl">
+          <div className="absolute top-[-20px] right-[80px] sm:top-[-30px] sm:right-[80px] md:top-[-40px] md:right-[80px] lg:top-[-40px] lg:right-[150px]">
+            <div className="relative w-[50px] h-[50px] sm:w-[65px] sm:h-[65px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px] z-60 flex">
               <Image
                 alt="icon"
                 src={
