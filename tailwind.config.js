@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: "#496AD0",
+        primaryText: "#2F68B7",
+        accent: "#6DC8F2",
+        accentText: "#2e68b6",
+        secondary: "#EBEBEB",
+        text: "#3C3C3C",
+        pale: "#E0E0E0"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -14,5 +23,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: ["tailwind-clip-path"],
 };
