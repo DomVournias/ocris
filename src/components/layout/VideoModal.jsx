@@ -20,7 +20,7 @@ export default function VideoModal({ video }) {
       }`}
     >
       <div ref={modalRef} className="m-auto overflow-hidden rounded-xl">
-        <video width="640" height="640" preload="auto" autoPlay={true} loop>
+        <video width="640" height="640" preload="none" autoPlay={true} loop>
           <source src={video} type="video/mp4" />
         </video>
         <VideoEyeCloseButton />
