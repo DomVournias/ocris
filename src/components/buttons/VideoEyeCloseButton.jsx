@@ -12,7 +12,7 @@ export default function VideoEyeCloseButton() {
   return (
     <button
       onClick={closeVideoModal}
-      className="absolute right-6 top-2 w-10 h-10 text-3xl"
+      className="absolute right-6 top-2 w-10 h-10 text-3xl text-white"
     >
       ✕
     </button>

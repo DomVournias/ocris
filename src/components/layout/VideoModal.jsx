@@ -15,12 +15,14 @@ export default function VideoModal({ video }) {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen z-[1000] bg-primary backdrop-filter backdrop-blur-lg bg-opacity-50 ${
-        videoModal ? "flex" : "hidden"
+      className={`fixed flex top-0 left-0 w-screen h-screen z-[1000] bg-primary backdrop-filter backdrop-blur-lg bg-opacity-50 pl-5 pr-10 duration-300 ${
+        videoModal ? "visible opacity-100" : "invisible opacity-0"
       }`}
     >
-      <div ref={modalRef} className="relative max-w-2xl bg-white">
-        <h2>Video Modal</h2>
+      <div ref={modalRef} className="m-auto overflow-hidden rounded-xl">
+        <video width="640" height="640" preload="auto" autoPlay>
+          <source src={video} type="video/mp4" />
+        </video>
         <VideoEyeCloseButton />
       </div>
     </div>

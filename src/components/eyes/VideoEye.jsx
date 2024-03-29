@@ -7,7 +7,7 @@ export default function VideoEye({ image, title }) {
   return (
     <div>
       <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 ">
-        <div className="absolute z-[1000] bottom-[10px] left-[100px] sm:bottom-[20px] sm:left-[120px] md:bottom-[30px] md:left-[120px]  lg:bottom-[50px] lg:left-[220px] xl:bottom-[140px] xl:left-[140px] ">
+        <div className="absolute z-[1000] bottom-[30px] left-[50px] sm:bottom-[70px] sm:left-[50px] md:bottom-[80px] md:left-[80px] lg:bottom-[110px] lg:left-[110px] xl:bottom-[130px] xl:left-[140px] ">
           <VideoEyeButton />
         </div>
         <div className="absolute right-0 m-auto w-fit left-[-50%] bottom-[22%]">

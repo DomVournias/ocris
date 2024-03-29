@@ -9,7 +9,7 @@ export default function VideoEyeButton() {
   return (
     <button
       onClick={openVideoModal}
-      className="relative w-[100px] h-[100px] md:w-[110px] md:h-[110px]  lg:w-[120px] lg:h-[120px] xl:w-[130px] xl:h-[130px]"
+      className="relative w-[80px] h-[80px] md:w-[110px] md:h-[110px]  lg:w-[120px] lg:h-[120px] xl:w-[140px] xl:h-[140px]"
     >
       <Image
         alt="video play button image"
