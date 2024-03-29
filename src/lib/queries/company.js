@@ -1,6 +1,6 @@
 export const COMPANY_SECTIONS_QUERY = `
 query GetCompanySections {
-    pageBy(uri: "/εταιρία") {
+    pageBy(uri: "/εταιρεία") {
       hero {
         heroContent {
           heading1
