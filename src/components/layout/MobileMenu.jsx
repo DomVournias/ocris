@@ -7,8 +7,6 @@ const MobileMenu = ({ children }) => {
   const mobileMenuModal = useStore((state) => state.mobileMenuModal);
   const closeMobileMenuModal = useStore((state) => state.closeMobileMenuModal);
 
-  console.log(mobileMenuModal);
-
   return (
     <div
       className={`w-screen h-screen absolute top-0 z-[9999] lg:hidden duration-300 ${

@@ -8,7 +8,6 @@ export default function VideoEyeCloseButton() {
   const videoModal = useStore((state) => state.videoModal);
   const closeVideoModal = useStore((state) => state.closeVideoModal);
 
-  console.log("Video Modal", videoModal);
   return (
     <button
       onClick={closeVideoModal}

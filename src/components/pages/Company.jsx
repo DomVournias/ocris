@@ -8,8 +8,6 @@ export default function Company({ page }) {
   const content = page.pageBy.company.content;
   const hero = page.pageBy.hero.heroContent;
 
-  console.log(content);
-
   return (
     <section>
       <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 ">
