@@ -17,7 +17,7 @@ import React from "react";
 export default async function page({ params }) {
   const encodedSlug = decodeURIComponent(params.slug);
 
-  if (encodedSlug === "εταιρία") {
+  if (encodedSlug === "εταιρεία") {
     const { data } = await fetchCompanyPage();
 
     return (
