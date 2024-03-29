@@ -69,15 +69,6 @@ export const HOME_SECTIONS_QUERY = `
               }
             }
           }
-          card2 {
-            title
-            link
-            image {
-              node {
-                sourceUrl
-              }
-            }
-          }
         }
         specialties {
           heading

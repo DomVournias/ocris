@@ -7,7 +7,11 @@ const useStore = create((set)=> ({
     setActiveProduct: (index) => set(() => ({activeProduct: index})),
     mobileMenuModal: false,
     openMobileMenuModal: () => set(() => ({mobileMenuModal: true})),
-    closeMobileMenuModal: () => set(() => ({mobileMenuModal: false}))
+    closeMobileMenuModal: () => set(() => ({mobileMenuModal: false})),
+    videoModal: false,
+    openVideoModal: () => set(() => ({videoModal: true})),
+    closeVideoModal: () => set(() => ({videoModal: false})),
+
 }))
 
 export default useStore
