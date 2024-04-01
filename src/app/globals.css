@@ -28,6 +28,14 @@ body {
     rgb(var(--background-start-rgb)); */
 }
 
+.swiper-pagination {
+  margin-bottom: -15px!important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #3C3C3C !important;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -67,6 +75,13 @@ body {
   .products-slider .swiper-slide{
     display: flex!important;
   }
+
+  .disabled_swiper_button {
+    opacity: 0;
+    cursor: auto;
+    pointer-events: none;
+}
+
 }
 
 @layer components {
@@ -193,4 +208,10 @@ body {
   .small-eye-icon {
     @apply relative w-[50px] h-[50px] sm:w-[65px] sm:h-[65px] md:w-[80px] md:h-[80px] lg:w-[100px] lg:h-[100px] xl:w-[120px] xl:h-[120px] z-[60] flex;
   }
+
+  .testimonial {
+    @apply relative flex flex-col gap-2 mt-4 text-center;
+  }
+
+  
 }

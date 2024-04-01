@@ -11,7 +11,8 @@ const useStore = create((set)=> ({
     videoModal: false,
     openVideoModal: () => set(() => ({videoModal: true})),
     closeVideoModal: () => set(() => ({videoModal: false})),
-
+    currentTestimonial: 0,
+    setCurrentTestimonial: (index) => set(() => ({currentTestimonial: index})),
 }))
 
 export default useStore

@@ -5,6 +5,7 @@ import { HOME_SECTIONS_QUERY } from "../queries/home";
 import { LAYOUT_QUERY } from "../queries/layout";
 import { NETWORKS_SECTIONS_QUERY } from "../queries/network";
 import { PRODUCTS_SECTIONS_QUERY } from "../queries/products";
+import { TESTIMONIALS_QUERY } from "../queries/testimonials";
 import { getSinglePostBySlug } from "../queries/post";
 
 export async function fetchDataNoCache(query) {
@@ -64,5 +65,10 @@ export async function fetchContactPage() {
 
 export async function fetchSinglePost(slug) {
   const data = await fetchDataNoCache(getSinglePostBySlug(slug));
+  return data;
+}
+
+export async function fetchTestimonials() {
+  const { data } = await fetchDataNoCache(TESTIMONIALS_QUERY);
   return data;
 }

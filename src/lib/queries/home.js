@@ -103,21 +103,6 @@ export const HOME_SECTIONS_QUERY = `
             link
           }
         }
-        testimonials {
-          title
-          description
-          link
-          icon {
-            node {
-              sourceUrl
-            }
-          }
-          eyeImage {
-            node {
-              sourceUrl
-            }
-          }
-        }
         articles {
           heading
           posts {

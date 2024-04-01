@@ -1,3 +1,5 @@
+import { fetchHomePage, fetchTestimonials } from "../lib/functions";
+
 import Articles from "../components/sections/articles/Articles";
 import Hero from "../components/sections/hero/Hero";
 import Info from "@/components/sections/info/Info";
@@ -6,7 +8,6 @@ import Products from "@/components/sections/Products";
 import Specialties from "../components/sections/specialties/Specialties";
 import Testimonials from "../components/sections/testimonials/Testimonials";
 import Vision from "../components/sections/vision/Vision";
-import { fetchHomePage } from "../lib/functions";
 
 export const metadata = {
   title: "OCRIS",
@@ -21,6 +22,7 @@ export const metadata = {
 
 export default async function Home() {
   const { data } = await fetchHomePage();
+  const { testimonials } = await fetchTestimonials()
 
   const sections = data.pageBy.sections;
   const hero = data.pageBy.hero.heroContent;
@@ -30,6 +32,7 @@ export default async function Home() {
   const icon = hero.icon.node.sourceUrl;
 
 
+  // console.log(testimonials);
   return (
     <>
       <Hero
@@ -49,7 +52,7 @@ export default async function Home() {
       <Vision data={sections.vision}  />
       <Instructions data={sections.instructions} />
       <Specialties data={sections.specialties}  />
-      <Testimonials data={sections.testimonials} />
+      <Testimonials data={testimonials.nodes} />
       <Articles data={sections.articles}  />
     </>
   );
