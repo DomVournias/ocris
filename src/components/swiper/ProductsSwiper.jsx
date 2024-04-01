@@ -19,6 +19,7 @@ export default function ProductsSwiper({
 }) {
   const currentProduct = useStore((state) => state.currentProduct);
   const setCurrentProduct = useStore((state) => state.setCurrentProduct);
+  const setActiveProduct = useStore((state) => state.setActiveProduct);
 
   const router = useRouter();
 
@@ -31,6 +32,7 @@ export default function ProductsSwiper({
   const handleProductSlide = (index, slug) => {
     // handleSwipe(index);
     setCurrentProduct(index);
+    setActiveProduct(index);
     router.push(`/προϊόντα/#${slug}`);
   };
 

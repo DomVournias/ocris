@@ -1,25 +1,9 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-import { useParams, usePathname, useRouter } from "next/navigation";
-
 import Image from "next/image";
-import useStore from "@/lib/stores/store";
+import React from "react";
+import { useHashState } from "@/hooks/useHash";
 
 export default function SliderEye({ products }) {
-  const params = useParams();
-  const currentHash = window.location.hash.replace("#", "");
-  const [hash, setHash] = useState(currentHash || "");
-
-  useEffect(() => {
-    if (!hash) {
-      setHash(currentHash);
-    }
-  }, [params]);
-
-  console.log(hash);
-
-  // const pathSlug = router.asPath.split("#")[1];
+  const [hash, setHash] = useHashState();
 
   return (
     <div className="container">
