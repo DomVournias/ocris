@@ -25,6 +25,7 @@ query GetProductsSections {
             nodes {
               ... on Product {
                 id
+                slug
                 productDetails {
                   content {
                     description

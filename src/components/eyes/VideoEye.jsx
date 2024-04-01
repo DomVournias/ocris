@@ -6,7 +6,7 @@ import VideoEyeButton from "../buttons/VideoEyeButton";
 export default function VideoEye({ image, title }) {
   return (
     <div>
-      <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 ">
+      <div className="container">
         <div className="absolute z-[1000] bottom-[30px] left-[50px] sm:bottom-[70px] sm:left-[50px] md:bottom-[80px] md:left-[80px] lg:bottom-[110px] lg:left-[110px] xl:bottom-[130px] xl:left-[140px] ">
           <VideoEyeButton />
         </div>

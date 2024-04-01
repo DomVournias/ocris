@@ -5,7 +5,7 @@ import React from "react";
 export default function Info({ data }) {
   return (
     <section>
-      <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 ">
+      <div className="container">
         <ContentEye icon={"heart"}>
           <span className="text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[24px] text-primary text-center">
             {data.title}
@@ -14,7 +14,7 @@ export default function Info({ data }) {
             {data.paragraph}
           </p>
           <CardButton
-            text={"Μάθε περισσότερα"}
+            text={"Περισσότερα"}
             link={data.link}
             className="self-center text-center"
           />

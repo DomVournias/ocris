@@ -7,34 +7,44 @@ import React, { useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import useStore from "@/lib/stores/store";
 
 // Import Swiper styles
 
 export default function ProductsSwiper({
   products,
-  currentProduct,
-  handleSwipe,
+  // currentProduct,
+  // handleSwipe,
 }) {
+  const currentProduct = useStore((state) => state.currentProduct);
+  const setCurrentProduct = useStore((state) => state.setCurrentProduct);
+
+  const router = useRouter();
+
   const handleSlideChange = () => {
     const newProductIndex = (currentProduct + 1) % products.length;
-    handleSwipe(newProductIndex);
+    setCurrentProduct(newProductIndex);
+    // handleSwipe(newProductIndex);
   };
 
-  const handleProductSlide = (index) => {
-    handleSwipe(index);
+  const handleProductSlide = (index, slug) => {
+    // handleSwipe(index);
+    setCurrentProduct(index);
+    router.push(`/προϊόντα/#${slug}`);
   };
 
   useEffect(() => {
     if (window.matchMedia("(min-width: 1200px)").matches) {
       const intervalId = setInterval(() => {
         const newProductIndex = (currentProduct + 1) % products.length;
-        handleSwipe(newProductIndex);
+        setCurrentProduct(newProductIndex);
       }, 5000);
 
       // Cleanup function to clear interval on component unmount
       return () => clearInterval(intervalId);
     }
-  }, [currentProduct, handleSwipe, products.length]);
+  }, [currentProduct, setCurrentProduct, products.length]);
 
   return (
     <section>
@@ -69,7 +79,7 @@ export default function ProductsSwiper({
               className="flex justify-center items-center"
             >
               <button
-                onClick={() => handleProductSlide(index)}
+                onClick={() => handleProductSlide(index, product.slug)}
                 className="relative w-56 h-72 "
               >
                 <Image

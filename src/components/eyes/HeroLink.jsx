@@ -15,5 +15,5 @@ export default function HeroLink() {
     router.push("/προϊόντα");
   };
 
-  return <CardButton text={"Μάθε περισσότερα"} handleOnClick={onClick} />;
+  return <CardButton text={"Περισσότερα"} handleOnClick={onClick} />;
 }

@@ -8,10 +8,9 @@ import useStore from "@/lib/stores/store";
 export default function HeroImage({ products, image, icon }) {
   const currentProduct = useStore((state) => state.currentProduct);
 
-  const defaultEye =
-    "relative w-[270px] h-[270px] sm:w-[370px] sm:h-[370px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] xl:w-[800px] xl:h-[800px] rounded-tr-[0] rounded-bl-[0] duration-300 overflow-hidden rotate-45 z-10 shadow-2xl ";
-  const openedEye = "rounded-br-[70%] rounded-tl-[70%] ";
-  const closedEye = "rounded-br-[100%] rounded-tl-[100%] ";
+  const defaultEye = "hero-eye-big-container-animated";
+  const openedEye = "opened";
+  const closedEye = "closed";
 
   const [eyeState, setEyeState] = useState(openedEye);
 

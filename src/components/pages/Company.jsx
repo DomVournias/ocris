@@ -10,11 +10,11 @@ export default function Company({ page }) {
 
   return (
     <section>
-      <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 ">
+      <div className="container">
         <Hero
           eyeImage={hero.eyeImage.node.sourceUrl}
           link={false}
-          icon={null}
+          icon={hero.icon.node.sourceUrl}
           title={hero.title}
           heading1={hero.heading1}
           heading2={hero.heading2}
@@ -24,19 +24,19 @@ export default function Company({ page }) {
         <div className="max-w-[1200px] m-auto bg-white shadow-xl rounded-xl">
           <div
             dangerouslySetInnerHTML={{ __html: content.paragraph1 }}
-            className="post-content space-y-2 pt-[8vh] pb-[10vh] px-[10vw]"
+            className="post-content"
           />
           <div className="relative flex max-w-7xl justify-center items-center m-auto z-10">
             <ContentEye icon={"person"}>
               <div
                 dangerouslySetInnerHTML={{ __html: content.eye.content }}
-                className="text-accentText space-y-2 text-[10px] sm:text-[12px] md:text-[15px] lg:text-[18px]"
+                className="content-eye-content "
               ></div>
             </ContentEye>
           </div>
           <div
             dangerouslySetInnerHTML={{ __html: content.paragraph2 }}
-            className="post-content space-y-2 pt-[8vh] pb-[10vh] px-[10vw]"
+            className="post-content"
           />
         </div>
         <Image

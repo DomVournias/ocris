@@ -9,11 +9,11 @@ export default function Products({ page }) {
 
   return (
     <section>
-      <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 ">
+      <div className="container">
         <Hero
           eyeImage={hero.eyeImage.node.sourceUrl}
           link={false}
-          icon={null}
+          icon={hero.icon.node.sourceUrl}
           title={hero.title}
           heading1={hero.heading1}
           heading2={hero.heading2}

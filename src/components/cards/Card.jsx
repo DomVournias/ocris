@@ -63,7 +63,7 @@ export default function Card({
           )}
         </div>
         {!unlink === true && (
-          <CardButton text={"Μάθε περισσότερα"} link={`άρθρα/${link}`} />
+          <CardButton text={"Περισσότερα"} link={`άρθρα/${link}`} />
         )}
       </div>
     </article>

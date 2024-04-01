@@ -15,7 +15,7 @@ export default async function page({ params }) {
 
   return (
     <section>
-      <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 ">
+      <div className="container">
         <Hero
           eyeImage={post.featuredImage.node.sourceUrl}
           link={false}

@@ -22,7 +22,7 @@ export default function Specialties({ data }) {
           <h3 className="text-3xl text-center text-primary font-semibold">
             {data.heading}
           </h3>
-          <Cards type="posts" data={cards} />
+          <Cards type="posts" data={cards} unlink={true} />
         </div>
         <Image
           src={

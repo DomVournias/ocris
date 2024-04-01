@@ -1,24 +1,44 @@
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { useParams, usePathname, useRouter } from "next/navigation";
+
 import Image from "next/image";
-import React from "react";
 import useStore from "@/lib/stores/store";
 
 export default function SliderEye({ products }) {
-  const activeProduct = useStore((state) => state.activeProduct);
+  const params = useParams();
+  const currentHash = window.location.hash.replace("#", "");
+  const [hash, setHash] = useState(currentHash || "");
+
+  useEffect(() => {
+    if (!hash) {
+      setHash(currentHash);
+    }
+  }, [params]);
+
+  console.log(hash);
+
+  // const pathSlug = router.asPath.split("#")[1];
+
   return (
-    <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 py-[50px]">
+    <div className="container">
       {products.map((product, index) => (
         <div
           key={index}
           className={`absolute m-auto w-fit left-[-25%] right-0 `}
         >
-          <div className="relative w-[250px] h-[250px] sm:w-[320px] sm:h-[320px] md:w-[450px] md:h-[450px] lg:w-[450px] lg:h-[500px] xl:w-[600px] xl:h-[600px]">
+          <div
+            id={product.slug}
+            className="relative w-[250px] h-[250px] sm:w-[320px] sm:h-[320px] md:w-[450px] md:h-[450px] lg:w-[450px] lg:h-[500px] xl:w-[600px] xl:h-[600px]"
+          >
             <Image
               alt={"product" + "-" + product.id}
               src={product.productDetails.content.image.node.sourceUrl}
               fill={true}
               style={{ objectFit: "contain" }}
               className={`z-50 duration-500 ease-in-out ${
-                activeProduct === index
+                hash === product.slug
                   ? "opacity-100"
                   : "opacity-0 translate-x-10"
               }`}
@@ -38,7 +58,7 @@ export default function SliderEye({ products }) {
                 <div
                   key={index}
                   className={`absolute flex flex-col gap-2 left-0 right-0 text-[10px] sm:text-[12px] md:text-[13px] lg:text-[15px] xl:text-[18px]  ${
-                    activeProduct === index ? "opacity-100" : "opacity-0 "
+                    hash === product.slug ? "opacity-100" : "opacity-0 "
                   }`}
                   dangerouslySetInnerHTML={{
                     __html: product.productDetails.content.shortDescription,

@@ -9,11 +9,11 @@ export default function Articles({ page }) {
 
   return (
     <section>
-      <div className="relative flex max-w-7xl justify-center items-center m-auto z-10 ">
+      <div className="container">
         <Hero
           eyeImage={hero.eyeImage.node.sourceUrl}
           link={false}
-          icon={null}
+          icon={hero.icon.node.sourceUrl}
           title={hero.title}
           heading1={hero.heading1}
           heading2={hero.heading2}
@@ -21,7 +21,7 @@ export default function Articles({ page }) {
       </div>
       <article className="relative w-full pt-4 pb-32">
         <div className="max-w-[1200px] m-auto ">
-          <ul className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <ul className="w-full grid grid-cols-1 items-start md:grid-cols-2 lg:grid-cols-3 gap-10">
             {articles.map((article, index) => (
               <li
                 key={index}
