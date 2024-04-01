@@ -18,14 +18,14 @@ export default function Card({
       <div
         className={
           white
-            ? " flex flex-col justify-start space-y-4 w-80 bg-white px-6 py-6 rounded-xl shadow-lg"
-            : "flex flex-col justify-start space-y-4 w-80"
+            ? " flex flex-col justify-center space-y-4 w-80 bg-white px-6 py-6 rounded-xl shadow-lg"
+            : "flex flex-col justify-center space-y-4 w-80"
         }
       >
         <div
           className={
             type === "posts"
-              ? "p-5 bg-white w-fit flex shadow-lg rounded-full"
+              ? "p-5 self-center bg-white w-fit flex shadow-lg rounded-full"
               : `${white ? "flex shadow-lg" : "w-fit flex shadow-lg"}`
           }
         >
@@ -51,15 +51,24 @@ export default function Card({
             </div>
           )}
         </div>
+        {/* text-center  */}
         <div className="space-y-2 pb-4">
-          <h4 className="text-xl md:text-2xl text-primary pt-2">{title}</h4>
+          <h4
+            className={`text-xl md:text-2xl text-primary pt-2 ${
+              type === "posts" ? "text-center" : "text-left"
+            }`}
+          >
+            {title}
+          </h4>
           {type === "articles" ? (
             <div
               dangerouslySetInnerHTML={{ __html: description }}
               className="leading-8 font-medium text-text"
             />
           ) : (
-            <p className="leading-8 font-medium text-text">{description}</p>
+            <p className="leading-8 font-medium text-text text-center">
+              {description}
+            </p>
           )}
         </div>
         {!unlink === true && (

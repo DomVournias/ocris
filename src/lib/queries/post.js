@@ -9,6 +9,7 @@ export const getSinglePostBySlug = (slug) => {
                   title
                 }
               }
+              title
               content
               featuredImage {
                 node {

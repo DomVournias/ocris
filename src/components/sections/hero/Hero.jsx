@@ -61,7 +61,7 @@ export default function Hero({
         </div>
         <div className="hero-eye-small">
           <div className="hero-eye-content-inner">
-            <div className="flex flex-col md:gap-5 ">
+            <div className="flex flex-col md:gap-3 ">
               <span className="hero-eye-heading-animated">{heading1}</span>
               <span className="hero-eye-heading">{heading2}</span>
             </div>

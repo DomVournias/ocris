@@ -62,9 +62,7 @@ body {
     border-radius: 100% 0;
   }
 
-  .swiper-pagination {
-    padding-top: 1rem;
-  }
+
 
   .products-slider .swiper-slide{
     display: flex!important;
@@ -78,6 +76,10 @@ body {
 
   .post-content {
     @apply space-y-2 pt-[8vh] pb-[10vh] px-[10vw];
+  }
+
+  .post-content h2 {
+    @apply text-2xl md:text-3xl font-semibold text-primary pb-2 pt-6;
   }
 
   .post-content h3 {
@@ -141,19 +143,19 @@ body {
   }
 
   .hero-eye-heading-animated {
-    @apply lg:ml-[-50px] xl:ml-[-80px] text-xl md:text-3xl lg:text-4xl xl:text-6xl text-accentText font-bold animate-blur;
+    @apply ml-[-20px] lg:ml-[-30px] xl:ml-[-50px] text-xl md:text-3xl lg:text-4xl xl:text-6xl text-accentText font-bold animate-blur;
   }
 
   .hero-eye-heading {
-    @apply lg:ml-[20px] xl:ml-[40px] text-xl md:text-3xl lg:text-4xl xl:text-6xl text-white font-bold;
+    @apply lg:ml-[20px] xl:ml-[0px] text-xl md:text-3xl lg:text-4xl xl:text-6xl text-white font-bold;
   }
 
   .hero-eye-title {
-    @apply text-xs sm:text-base md:text-xl lg:text-2xl xl:text-3xl text-center text-primary font-semibold;
+    @apply text-xs sm:text-base md:text-xl lg:text-2xl xl:text-3xl text-center text-primary font-semibold ml-[-30px] mr-[-30px] lg:ml-[-80px] lg:mr-[-80px];
   }
 
   .hero-eye-content-inner {
-    @apply flex flex-col gap-2 md:gap-10  justify-center w-1/2 h-full rotate-[-45deg];
+    @apply flex flex-col gap-1 md:gap-5  justify-center w-1/2 h-full rotate-[-45deg];
   }
 
   .content-eye-content {

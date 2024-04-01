@@ -11,7 +11,7 @@ export default async function page({ params }) {
   const post = data.postBy;
   const hero = post.hero.heroContent;
 
-  // console.log(post);
+  console.log(post);
 
   return (
     <section>
@@ -23,16 +23,16 @@ export default async function page({ params }) {
             process.env.NEXT_WP_PUBLIC_ENDPOINT +
             "/wp-content/uploads/2024/03/2Asset-3.png"
           }
-          title={hero.title}
-          heading1={hero.heading1}
-          heading2={hero.heading2}
+          title={post.title}
+          heading1={"YOU SEE"}
+          heading2={"DIFFERENCE"}
         />
       </div>
       <article className="relative w-full pt-4 pb-32">
-        <div className="max-w-[1200px] py-[110px] px-[110px]  m-auto bg-white shadow-xl rounded-xl">
+        <div className="max-w-[1200px] m-auto bg-white shadow-xl rounded-xl">
           <div
             dangerouslySetInnerHTML={{ __html: post.content }}
-            className="post-content space-y-4"
+            className="post-content"
           />
         </div>
         <Image
