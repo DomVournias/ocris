@@ -7,6 +7,11 @@
           nodes {
             title
             slug
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
           }
         }
       }

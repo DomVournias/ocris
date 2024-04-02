@@ -3,11 +3,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 
-import { FaTelegramPlane } from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
+import Image from "next/image";
 import Spinner from "../loading/Spinner";
 import { searchPosts } from "@/actions/search";
 import { useClickOutside } from "@/hooks/useClickOutside";
+import { useRouter } from "next/navigation";
+import useStore from "@/lib/stores/store";
 
 const SubmitButton = ({ setLoading }) => {
   const { pending } = useFormStatus();
@@ -35,6 +36,8 @@ export default function SearchForm() {
     data: null,
   };
 
+  const router = useRouter();
+  const closeSearchModal = useStore((state) => state.closeSearchModal);
   const [formState, formAction] = useFormState(searchPosts, initialState);
   const [showResults, setShowResults] = useState(false);
   const [results, setResults] = useState([]);
@@ -48,12 +51,16 @@ export default function SearchForm() {
     setShowResults(false);
   };
 
+  const navigateToPost = (path) => {
+    setLoading(false);
+    setResults([]);
+    setShowResults(false);
+    closeSearchModal();
+    router.push(path);
+  };
+
   const resultsRef = useRef();
   useClickOutside(resultsRef, hideResultsDropdown);
-
-  // const handleSearch = (e) => {
-  //   setSearch(e.target.value);
-  // };
 
   useEffect(() => {
     setLoading(true);
@@ -66,7 +73,7 @@ export default function SearchForm() {
     setLoading(false);
   }, [formState]);
 
-  console.log(loading, results);
+  // console.log(loading, results);
   return (
     <section ref={resultsRef}>
       <form action={formAction} className="max-w-xl mx-auto mt-[-20vh]">
@@ -118,7 +125,20 @@ export default function SearchForm() {
           <ul className="flex flex-col text-text py-4 px-4 gap-2">
             {results.map((item, index) => (
               <li key={index} className="font-semibold">
-                {item.title}
+                <button
+                  onClick={() => navigateToPost(`/άρθρα/${item.slug}`)}
+                  className="flex gap-4 items-center w-full"
+                >
+                  <div className="relative w-[20%] h-20 rounded-xl">
+                    <Image
+                      src={item.featuredImage.node.sourceUrl}
+                      alt={item.title}
+                      fill={true}
+                      style={{ objectFit: "cover", borderRadius: "10px" }}
+                    />
+                  </div>
+                  <div className="w-[80%] text-left">{item.title}</div>
+                </button>
               </li>
             ))}
           </ul>

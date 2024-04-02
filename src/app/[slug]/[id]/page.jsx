@@ -11,7 +11,7 @@ export default async function page({ params }) {
   const post = data.postBy;
   const hero = post.hero.heroContent;
 
-  console.log(post);
+  // console.log(post);
 
   return (
     <section>
