@@ -11,6 +11,10 @@ export default function ProductsPageContent({ products }) {
   const activeProduct = useStore((state) => state.activeProduct);
   const setActiveProduct = useStore((state) => state.setActiveProduct);
 
+  const icon =
+    process.env.NEXT_WP_PUBLIC_ENDPOINT +
+    "/wp-content/uploads/2024/04/star-button.png";
+
   //   const product = page.products.nodes[activeProduct].productDetails.content;
 
   // console.log("Current Product", activeProduct);
@@ -23,7 +27,7 @@ export default function ProductsPageContent({ products }) {
           handleSwipe={setActiveProduct}
         />
         <div>
-          <SliderEye products={products} />
+          <SliderEye products={products} icon={icon} />
         </div>
         <div className="max-w-[1200px] py-[10vh] px-[10vw] m-auto bg-white shadow-xl rounded-xl">
           {products.map((product, index) => (
