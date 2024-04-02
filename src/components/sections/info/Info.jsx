@@ -13,11 +13,11 @@ export default function Info({ data }) {
           <p className="text-[10px] sm:text-[13px] md:text-[16px] lg:text-[16px] xl:text-[18px] font-medium text-text text-center pb-2 lg:pb-4">
             {data.paragraph}
           </p>
-          {/* <CardButton
+          <CardButton
             text={"Περισσότερα"}
-            link={data.link}
+            link="εταιρεία"
             className="self-center text-center"
-          /> */}
+          />
         </ContentEye>
       </div>
     </section>

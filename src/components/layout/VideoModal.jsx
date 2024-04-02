@@ -2,6 +2,8 @@
 
 import React, { useRef } from "react";
 
+import InstructionalVideo from "../../../videos/ocris-video.mp4";
+import Video from "next-video";
 import VideoEyeCloseButton from "../buttons/VideoEyeCloseButton";
 import { useClickOutside } from "@/hooks/useClickOutside";
 import useStore from "@/lib/stores/store";
@@ -20,9 +22,19 @@ export default function VideoModal({ video }) {
       }`}
     >
       <div ref={modalRef} className="m-auto overflow-hidden rounded-xl">
-        <video width="640" height="640" autoPlay loop muted>
+        {/* <video width="640" height="640" autoPlay loop muted>
           <source src={video} type="video/mp4" />
-        </video>
+        </video> */}
+        <Video
+          src={InstructionalVideo}
+          autoplay
+          style={{
+            maxWidth: "600px",
+            maxHeight: "600px",
+            height: "600px",
+            aspectRation: 1 / 1,
+          }}
+        />
         <VideoEyeCloseButton />
       </div>
     </div>

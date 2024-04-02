@@ -62,11 +62,11 @@ export default function TestimonialsSwiper({ testimonials }) {
               className="flex justify-center items-center"
             >
               <div className="testimonial">
-                <span className="text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[23px] text-primary text-center">
+                <span className="text-[12px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[23px] text-primary text-center font-semibold">
                   {fields.name}
                 </span>
                 <span className="text-[11px] md:text-[12px] lg:text-[12px] xl:text-[16px] text-primary">
-                  {fields.title + " - " + fields.company}
+                  {fields.title} {fields.company && " - "} {fields.company}
                 </span>
                 <p className="text-[10px] sm:text-[13px] md:text-[16px] lg:text-[16px] xl:text-[18px] font-medium text-text text-center pb-2 lg:pb-4 lg:pt-3">
                   {fields.comment}
