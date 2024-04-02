@@ -6,6 +6,8 @@ import Footer from "../components/layout/Footer";
 import Header from "../components/layout/Header";
 import Menu from "@/components/layout/Menu";
 import MobileMenu from "@/components/layout/MobileMenu";
+import SearchForm from "@/components/forms/SearchForm";
+import SearchModal from "@/components/layout/SearchModal";
 // import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 
@@ -32,6 +34,9 @@ export default async function RootLayout({ children }) {
               <MobileMenu >
                 <Menu menu={data.headerMenu.menuItems.nodes} socials={data.socialsSection.socials}/>
               </MobileMenu>
+              <SearchModal>
+                <SearchForm/>
+              </SearchModal>
       </body>
     </html>
   );

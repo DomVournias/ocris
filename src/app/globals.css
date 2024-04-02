@@ -41,7 +41,13 @@ body {
 
 @layer utilities {
 
+  mux-player {
+    aspect-ratio: 1 / 1;
+  }
 
+  .next-video-container {
+    aspect-ratio: 1 / 1!important;
+  }
 
   .text-balance {
     text-wrap: balance;

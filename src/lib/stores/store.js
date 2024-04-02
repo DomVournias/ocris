@@ -13,6 +13,9 @@ const useStore = create((set)=> ({
     closeVideoModal: () => set(() => ({videoModal: false})),
     currentTestimonial: 0,
     setCurrentTestimonial: (index) => set(() => ({currentTestimonial: index})),
+    searchModal: false,
+    openSearchModal: () => set(() => ({searchModal: true})),
+    closeSearchModal: () => set(() => ({searchModal: false})),
 }))
 
 export default useStore

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileMenuBtn from "./MobileMenuBtn";
 import React from "react";
+import SearchButton from "../buttons/SearchButton";
 import SearchForm from "../forms/SearchForm";
 import Socials from "./socials/Socials";
 
@@ -50,7 +51,7 @@ export default function Header({ header, socials, menu }) {
                   </li>
                 ))}
 
-                <SearchForm />
+                <SearchButton />
               </ul>
             </nav>
             <div className="relative">
@@ -73,7 +74,8 @@ export default function Header({ header, socials, menu }) {
               />
             </Link>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex gap-4 items-center justify-center">
+            <SearchButton />
             <MobileMenuBtn />
           </div>
         </div>

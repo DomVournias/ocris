@@ -27,7 +27,6 @@ export default function VideoModal({ video }) {
         </video> */}
         <Video
           src={InstructionalVideo}
-          autoplay
           style={{
             maxWidth: "600px",
             maxHeight: "600px",
