@@ -3,6 +3,7 @@
 export async function sendContactMessage(prevState, formData) {
     const contactFormUrl = process.env.NEXT_WP_PUBLIC_ENDPOINT + "/wp-json/contact-form-7/v1/contact-forms/414/feedback";
     try {
+        // Form fields
         const _wpcf7 = '414';    
         const _wpcf7_version = '5.9.3';
         const _wpcf7_locale = 'en_US';
@@ -25,7 +26,6 @@ export async function sendContactMessage(prevState, formData) {
         formDataObject.append('_wpcf7_container_post', _wpcf7_container_post);
         formDataObject.append('_wpcf7_posted_data_hash', _wpcf7_posted_data_hash);
 
-        console.log('FORMDATA OBJECT', formDataObject);
 
         // Make the fetch request with FormData and correct headers
         const res = await fetch(contactFormUrl, {
@@ -34,8 +34,6 @@ export async function sendContactMessage(prevState, formData) {
         });
 
         const data = await res.json()
-
-        console.log("CONTACT FORM RES", data);
 
         return data;
     } catch (error) {
