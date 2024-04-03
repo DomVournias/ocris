@@ -4,7 +4,7 @@ import React from "react";
 export default function ProductEye({ image, title, paragraph, icon }) {
   return (
     <div className="container">
-      <div className="absolute m-auto w-fit left-[-25%] right-0 z-[60]">
+      <div className="absolute m-auto w-fit left-[-45%] sm:left-[-25%] right-0 z-[60]">
         <div className="relative w-[250px] h-[250px] sm:w-[320px] sm:h-[320px] md:w-[450px] md:h-[450px] lg:w-[450px] lg:h-[500px] xl:w-[600px] xl:h-[600px]">
           <Image
             alt={"product"}

@@ -26,10 +26,10 @@ export default function ProductsPageContent({ products }) {
           currentProduct={activeProduct}
           handleSwipe={setActiveProduct}
         />
-        <div>
+        <div className="pt-10">
           <SliderEye products={products} icon={icon} />
         </div>
-        <div className="max-w-[1200px] py-[10vh] px-[10vw] m-auto bg-white shadow-xl rounded-xl">
+        <div className="max-w-[1200px] m-auto bg-white shadow-xl rounded-xl">
           {products.map((product, index) => (
             <div
               key={index}

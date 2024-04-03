@@ -23,7 +23,7 @@ export default function SliderEye({ products, image, title, paragraph, icon }) {
       {products.map((product, index) => (
         <div
           key={index}
-          className={`absolute m-auto w-fit left-[-25%] right-0 `}
+          className={`absolute m-auto w-fit left-[-45%] sm:left-[-25%] right-0 `}
         >
           <div
             id={product.slug}
