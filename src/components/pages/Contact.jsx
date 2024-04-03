@@ -6,9 +6,7 @@ import React from "react";
 export default function Contact({ page }) {
   const content = page.pageBy.contact.content;
   const hero = page.pageBy.hero.heroContent;
-  // console.log("Contact", content);
 
-  console.log(hero);
   return (
     <section>
       <div className="container">
