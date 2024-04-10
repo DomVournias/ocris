@@ -7,7 +7,7 @@ import Socials from "./socials/Socials";
 export default function Footer({ footer, menu, socials }) {
   // console.log(socials);
   return (
-    <footer className="bg-pale flex items-center">
+    <footer className="bg-pale flex flex-col items-center">
       <section className="w-full py-10 lg:py-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-x-4 max-w-[1440px] m-auto ">
         <div className="w-2/3 lg:w-full flex flex-col px-6 py-8 space-y-8">
           <Link href="/" className="h-[125px] w-[200px] flex relative">
@@ -50,6 +50,18 @@ export default function Footer({ footer, menu, socials }) {
         <div className="w-full flex flex-col px-6 py-8  ">
           <Socials socials={socials} className=" bg-primary text-white" />
         </div>
+      </section>
+      <section className="px-6 py-3">
+        <span>Design & Development by</span>
+        <a
+          href="https://healthmarketing.gr"
+          target="_blank"
+          alt="Health Marketing Website"
+          rel="noopener"
+          className="text-primary font-bold ml-1"
+        >
+          Health Marketing - Υπηρεσίες Iατρικού Marketing
+        </a>
       </section>
     </footer>
   );

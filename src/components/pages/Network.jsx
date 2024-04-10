@@ -35,7 +35,7 @@ export default function Network({ page }) {
               icon={icon}
             />
           </div>
-          <ul className="grid grid-cols-2 gap-10 post-content space-y-2 py-[10vh] px-[10vw]">
+          {/* <ul className="grid grid-cols-2 gap-10 post-content space-y-2 py-[10vh] px-[10vw]">
             {content.networks.map((item, index) => (
               <li key={index} className="flex justify-center items-center">
                 <address
@@ -44,7 +44,7 @@ export default function Network({ page }) {
                 ></address>
               </li>
             ))}
-          </ul>
+          </ul> */}
         </div>
         <Image
           art="background"

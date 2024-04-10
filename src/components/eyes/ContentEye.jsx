@@ -19,9 +19,13 @@ export default function ContentEye({ children, icon }) {
     const heartBg =
       process.env.NEXT_WP_PUBLIC_ENDPOINT +
       "/wp-content/uploads/2024/04/eye-content-image-1.png";
+
     const personBg =
       process.env.NEXT_WP_PUBLIC_ENDPOINT +
-      "/wp-content/uploads/2024/04/eye-content-image-2.png";
+      "/wp-content/uploads/2024/04/eye-person-image.png";
+
+    const sprayBg = process.env.NEXT_WP_PUBLIC_ENDPOINT;
+
     const starBg =
       process.env.NEXT_WP_PUBLIC_ENDPOINT +
       "/wp-content/uploads/2024/04/woman-1-1.png";
