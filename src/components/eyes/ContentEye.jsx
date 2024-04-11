@@ -24,7 +24,8 @@ export default function ContentEye({ children, icon }) {
       process.env.NEXT_WP_PUBLIC_ENDPOINT +
       "/wp-content/uploads/2024/04/eye-person-image.png";
 
-    const sprayBg = process.env.NEXT_WP_PUBLIC_ENDPOINT;
+    const sprayBg = process.env.NEXT_WP_PUBLIC_ENDPOINT + 
+      "/wp-content/uploads/2024/04/spray-eye-image.png";
 
     const starBg =
       process.env.NEXT_WP_PUBLIC_ENDPOINT +
@@ -41,6 +42,10 @@ export default function ContentEye({ children, icon }) {
       if (icon === "person") {
         return personBg;
       }
+
+      if (icon === "spray") {
+        return sprayBg;
+      }
     }
     if (type === "icon") {
       if (icon === "heart") {
@@ -50,7 +55,7 @@ export default function ContentEye({ children, icon }) {
         return star;
       }
 
-      if (icon === "person") {
+      if (icon === "person" || icon === "spray") {
         return person;
       }
     }
