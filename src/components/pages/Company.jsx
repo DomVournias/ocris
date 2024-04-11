@@ -27,7 +27,7 @@ export default function Company({ page }) {
             className="post-content"
           />
           <div className="relative flex max-w-7xl justify-center items-center m-auto z-10">
-            <ContentEye icon={"person"}>
+            <ContentEye icon={"spray"}>
               <div
                 dangerouslySetInnerHTML={{ __html: content.eye.content }}
                 className="content-eye-content "
