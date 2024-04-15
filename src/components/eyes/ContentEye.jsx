@@ -67,6 +67,7 @@ export default function ContentEye({ children, icon }) {
     <>
       <div className="content-eye">
         <Image
+          id="eye-background"
           alt="eye"
           src={Bg}
           fill={true}
